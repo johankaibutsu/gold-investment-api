@@ -1,0 +1,5 @@
+"fastapi[all]"
+openai
+python-dotenv
+google-generativeai
+"sqlalchemy[pydantic-compat]"
