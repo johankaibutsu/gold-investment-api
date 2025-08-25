@@ -1,4 +1,4 @@
-#How to Use This API Locally
+# How to Use This API Locally
 
 1. Clone the repository:
    ```
@@ -35,8 +35,8 @@
 7. Access the API at `http://127.0.0.1:8000/docs` You get a nice interface thanks to swagger UI.
 
 
-#How to test the API Workflow
-##Scenario 1: When user asks about gold investment or any other investment options
+# How to test the API Workflow
+## Scenario 1: When user asks about gold investment or any other investment options
 
 1. Expand the POST /chat endpoint and click "Try it out".
 2. Enter the following in the request body. Let's use user_test_jk as our user.
@@ -58,7 +58,7 @@ Behind the Scenes: A new row has been added to your chat_history.db with this qu
 4. Change the request body to the following, using the same user_id:
 ```JSON
 {
-  "user_id": "user_test_007",
+  "user_id": "user_test_jk",
   "question": "yes sure"
 }
 ```
@@ -72,7 +72,7 @@ Expected Response: This time, the API recognizes the context and provides the ac
 ```
 This action will perform the redirect on the frontend.
 
-##Scenario 2: When user asks anything else
+## Scenario 2: When user asks anything else
 
 1. Expand the POST /chat endpoint and click "Try it out".
 2. Enter the following in the request body. Let's use user_test_jk as our user.
@@ -90,7 +90,7 @@ Expected Response: You'll get a standard response from the model that includes t
   "action_to_perform": null
 }
 ```
-
+## Redirect API endpoint
 Another endpoint is /invest/options which just gives you a hardcoded json response about all the investment options available and some basic information about each option. In a working application after the user has given the confirmation, the API will redirect the user to this investment options page.
 ```JSON
 {
