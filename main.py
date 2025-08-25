@@ -129,7 +129,6 @@ def handle_chat_query(query: ChatQuery, db: Session = Depends(get_db)):
 
 @app.get("/invest/options", response_model=InvestmentSteps, tags=["Investment"])
 def get_investment_options():
-    # This endpoint remains the same. It's the destination.
     mock_options = [
         InvestmentOption(plan_name="Gold Starter Pack", duration_months=6, min_investment=500.00, description="A perfect plan for beginners."),
         InvestmentOption(plan_name="Steady Saver", duration_months=12, min_investment=1000.00, description="Systematically invest every month for a year."),
